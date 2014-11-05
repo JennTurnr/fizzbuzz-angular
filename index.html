@@ -1,0 +1,17 @@
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+  <script src="app.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body ng-app="myApp">
+  <h1><span id="title-color">FizzBuzz Angular JS</span> - Enter a Number Below</h1>
+  <div ng-controller="myCtrl">
+    <input type="text"ng-model="range" placeholder="Enter number here">
+    <div ng-repeat = "num in numbers">
+      <p ng-if="num % 3 == 0 && num % 5 !== 0">Fizz {{num}}</p>
+      <p ng-if="num % 5 == 0 && num % 3 !== 0"> Buzz {{num}}</p>
+      <p ng-if="num % 15 == 0">FizzBuzz{{num}}</p>
+    </div>
+  </div>  
+</body>
